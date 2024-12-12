@@ -1,13 +1,6 @@
 $(document).ready(function(){
+    // scroll-up button show/hide script
     $(window).scroll(function(){
-        // sticky navbar on scroll script
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
-        }
-        
-        // scroll-up button show/hide script
         if(this.scrollY > 500){
             $('.scroll-up-btn').addClass("show");
         }else{
@@ -23,7 +16,7 @@ $(document).ready(function(){
     });
 
     $('.navbar .menu li a').click(function(){
-        // applying again smooth scroll on menu items click
+        // applying smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
     });
 
@@ -70,3 +63,25 @@ $(document).ready(function(){
         }
     });
 });
+
+// Smooth scrolling when clicking on navbar links
+        $(document).ready(function () {
+            $('.menu a').on('click', function (e) {
+                e.preventDefault(); // Prevent default anchor behavior
+                const target = $(this).attr('href'); // Get the target section's ID
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top - 50 // Adjust for any fixed navbar height
+                }, 800); // Smooth scroll duration (800ms)
+            });
+
+            // Scroll-up button functionality
+            $('.scroll-up-btn').click(function () {
+                $('html').animate({ scrollTop: 0 }, 600); // Scroll to the top
+            });
+
+            // Toggle navbar menu on smaller screens
+            $('.menu-btn').click(function () {
+                $('.navbar .menu').toggleClass("active");
+                $('.menu-btn i').toggleClass("active");
+            });
+        });
