@@ -7,136 +7,134 @@
   <link rel="stylesheet" href="nutrition.css">
 </head>
 <body>
-  <div class="container">
-    <h1>360 Degree Nutrition</h1>
-    <form id="nutrition-form">
-      <!-- Basic Information -->
-      <div class="form-group">
-        <input type="number" id="age" placeholder="Age" required>
-      </div>
-      <div class="form-group">
-        <select id="gender" required>
-          <option value="" disabled selected>Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <input type="number" id="height" placeholder="Height (cm)" required>
-      </div>
-      <div class="form-group">
-        <input type="number" id="weight" placeholder="Weight (kg)" required>
-      </div>
 
-      <!-- Health Metrics -->
-      <div class="form-group">
-        <label for="activity-level">Activity Level:</label>
-        <select id="activity-level">
-          <option value="sedentary">Sedentary</option>
-          <option value="lightly-active">Lightly Active</option>
-          <option value="moderately-active">Moderately Active</option>
-          <option value="very-active">Very Active</option>
-          <option value="highly-active">Highly Active</option>
-        </select>
+    <!-- Navbar -->
+  <nav>
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" width="50" height="50">
       </div>
-      <div class="form-group">
-        <input type="text" id="medical-conditions" placeholder="Medical Conditions (e.g., diabetes, hypertension)">
+      <div class="navbar-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#category">Category</a>
+        <a href="#profile">Profile</a>
       </div>
-      <div class="form-group">
-        <input type="text" id="cholesterol-levels" placeholder="Cholesterol Levels (e.g., high, low)">
-      </div>
+    </div>
+  </nav>
+  
+  <!-- Main container for form and results -->
+  <div class="main-container">
+    <!-- Form Section -->
+    <div class="form-container">
+      <h1>360 Degree Nutrition</h1>
+      <p>Welcome to our personalized nutrition plan generator! This page is designed to help you achieve your health and fitness goals by creating a tailored nutrition plan based on your unique attributes. By providing details such as your goal (e.g., weight loss, muscle gain, or maintenance), your current activity level, and your dietary preferences, we will generate a customized plan that aligns with your specific needs. Whether you're looking to fuel your workouts, balance your nutrition, or simply live a healthier lifestyle, our nutrition plan is here to support you every step of the way. Let’s get started on your path to a healthier you!</p>
+    
+      <form id="nutrition-form">
+        <!-- Basic Information -->
+        <div class="form-group">
+          <input type="number" id="age" placeholder="Age" required>
+        </div>
+        <div class="form-group">
+          <select id="gender" required>
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="number" id="height" placeholder="Height (cm)" required>
+        </div>
+        <div class="form-group">
+          <input type="number" id="weight" placeholder="Weight (kg)" required>
+        </div>
 
-      <!-- Dietary Preferences -->
-      <div class="form-group">
-        <label for="diet-type">Diet Type:</label>
-        <select id="diet-type">
-          <option value="vegetarian">Vegetarian</option>
-          <option value="vegan">Vegan</option>
-          <option value="non-vegetarian">Non-Vegetarian</option>
-          <option value="pescatarian">Pescatarian</option>
-          <option value="flexitarian">Flexitarian</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <input type="text" id="food-allergies" placeholder="Food Allergies (e.g., nuts, dairy)">
-      </div>
-      <div class="form-group">
-        <input type="text" id="favorite-foods" placeholder="Favorite Foods">
-      </div>
-      <div class="form-group">
-        <input type="text" id="foods-to-avoid" placeholder="Foods to Avoid">
-      </div>
-      <div class="form-group">
-        <label for="cultural-preferences">State Preferences:</label>
-        <select id="cultural-preferences">
-          <option value="" disabled selected>Select State</option>
-          <option value="andhra-pradesh">Andhra Pradesh</option>
-          <option value="arunachal-pradesh">Arunachal Pradesh</option>
-          <option value="assam">Assam</option>
-          <option value="bihar">Bihar</option>
-          <option value="chhattisgarh">Chhattisgarh</option>
-          <option value="goa">Goa</option>
-          <option value="gujarat">Gujarat</option>
-          <option value="haryana">Haryana</option>
-          <option value="himachal-pradesh">Himachal Pradesh</option>
-          <option value="jharkhand">Jharkhand</option>
-          <option value="karnataka">Karnataka</option>
-          <option value="kerala">Kerala</option>
-          <option value="madhya-pradesh">Madhya Pradesh</option>
-          <option value="maharashtra">Maharashtra</option>
-          <option value="manipur">Manipur</option>
-          <option value="meghalaya">Meghalaya</option>
-          <option value="mizoram">Mizoram</option>
-          <option value="nagaland">Nagaland</option>
-          <option value="odisha">Odisha</option>
-          <option value="punjab">Punjab</option>
-          <option value="rajasthan">Rajasthan</option>
-          <option value="sikkim">Sikkim</option>
-          <option value="tamil-nadu">Tamil Nadu</option>
-          <option value="telangana">Telangana</option>
-          <option value="tripura">Tripura</option>
-          <option value="uttar-pradesh">Uttar Pradesh</option>
-          <option value="uttarakhand">Uttarakhand</option>
-          <option value="west-bengal">West Bengal</option>
-          <option value="andaman-nicobar">Andaman and Nicobar Islands</option>
-          <option value="chandigarh">Chandigarh</option>
-          <option value="dadar-nagar-haveli">Dadra and Nagar Haveli and Daman and Diu</option>
-          <option value="delhi">Delhi</option>
-          <option value="lakshadweep">Lakshadweep</option>
-          <option value="puducherry">Puducherry</option>
-        </select>
-      </div>
+        <!-- Health Metrics -->
+        <div class="form-group">
+          <label for="activity-level">Activity Level:</label>
+          <select id="activity-level">
+            <option value="sedentary">Sedentary</option>
+            <option value="lightly-active">Lightly Active</option>
+            <option value="moderately-active">Moderately Active</option>
+            <option value="very-active">Very Active</option>
+            <option value="highly-active">Highly Active</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" id="medical-conditions" placeholder="Medical Conditions (e.g., diabetes, hypertension)">
+        </div>
+        <div class="form-group">
+          <input type="text" id="cholesterol-levels" placeholder="Cholesterol Levels (e.g., high, low)">
+        </div>
 
-      <!-- Goals -->
-      <div class="form-group">
-        <label for="diet-goal">Diet Goal:</label>
-        <select id="diet-goal">
-          <option value="weight-loss">Weight Loss</option>
-          <option value="weight-gain">Weight Gain</option>
-          <option value="muscle-building">Muscle Building</option>
-          <option value="maintenance">Maintenance</option>
-          <option value="health-improvement">Improving Specific Health Conditions</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <input type="number" id="target-weight" placeholder="Target Weight (kg)">
-      </div>
-      <div class="form-group">
-        <input type="text" id="time-frame" placeholder="Time Frame (e.g., 1 month, 3 months)">
-      </div>
-      <div class="form-group">
-        <label for="cooking-skills">Cooking Skills:</label>
-        <select id="cooking-skills">
-          <option value="beginner">Beginner</option>
-          <option value="intermediate">Intermediate</option>
-          <option value="expert">Expert</option>
-        </select>
-      </div>
+        <!-- Dietary Preferences -->
+        <div class="form-group">
+          <label for="diet-type">Diet Type:</label>
+          <select id="diet-type">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="non-vegetarian">Non-Vegetarian</option>
+            <option value="pescatarian">Pescatarian</option>
+            <option value="flexitarian">Flexitarian</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" id="food-allergies" placeholder="Food Allergies (e.g., nuts, dairy)">
+        </div>
+        <div class="form-group">
+          <input type="text" id="favorite-foods" placeholder="Favorite Foods">
+        </div>
+        <div class="form-group">
+          <input type="text" id="foods-to-avoid" placeholder="Foods to Avoid">
+        </div>
+        <div class="form-group">
+          <label for="cultural-preferences">State Preferences:</label>
+          <select id="cultural-preferences">
+            <option value="" disabled selected>Select State</option>
+            <option value="andhra-pradesh">Andhra Pradesh</option>
+            <option value="arunachal-pradesh">Arunachal Pradesh</option>
+            <!-- Additional states... -->
+          </select>
+        </div>
 
-      <!-- Submit Button -->
-      <button type="submit">Submit</button>
-    </form>
+        <!-- Goals -->
+        <div class="form-group">
+          <label for="diet-goal">Diet Goal:</label>
+          <select id="diet-goal">
+            <option value="weight-loss">Weight Loss</option>
+            <option value="weight-gain">Weight Gain</option>
+            <option value="muscle-building">Muscle Building</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="health-improvement">Improving Specific Health Conditions</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="number" id="target-weight" placeholder="Target Weight (kg)">
+        </div>
+        <div class="form-group">
+          <input type="text" id="time-frame" placeholder="Time Frame (e.g., 1 month, 3 months)">
+        </div>
+        <div class="form-group">
+          <label for="cooking-skills">Cooking Skills:</label>
+          <select id="cooking-skills">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="expert">Expert</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Results Box -->
+    <div class="results-box">
+      <h2>Analysis Results</h2>
+      <p>Once you submit the form, the results of your personalized nutrition plan will be displayed here.</p>
+    </div>
   </div>
+
 </body>
 </html>

@@ -1,70 +1,147 @@
+/* General styling */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #c2e9b5;
-  /* background-image: url('images/vegi.jpg'); */
+  font-family: 'Roboto', sans-serif;
+  background-image: url('images/nutritionbackground.png');
+  background-color: #f0f4f8;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
+  padding-top: 100px; /* Adjust padding to avoid overlap with the navbar */
 }
 
-.container {
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+/* Navbar Styling */
+nav {
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 500px;
+  background-color: #65e2be;
+  padding: 10px 0; /* Adjusted padding for the navbar */
+  z-index: 1000; /* Ensure navbar stays above other content */
 }
 
-h1 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
+.navbar-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
+.logo img {
+  width: 75px;
+  height: 75px;
 }
 
-input,
-select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
+.navbar-links a {
+  color: rgb(21, 9, 9);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #388e3c;
+.navbar-links a:hover {
+  background-color: #108665;
+  border-radius: 5px;
 }
 
+/* Main container to hold both form and results */
+.main-container {
+  display: flex;
+  width: 100%;
+  margin-top: 80px; /* To avoid overlap with the navbar */
+  max-width: 1300px;
+}
+
+/* Form container */
+.form-container {
+  background: linear-gradient(135deg, #65e2be, #65e2be);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  text-align: center;
+}
+
+/* Results box */
+.results-box {
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin-left: 20px;
+  border-radius: 15px;
+  height: 100vh;
+  position: relative;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.results-box p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Label styling */
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input and select fields styling */
+input,
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Input and select focus styling */
 input:focus,
 select:focus {
-  border-color: #4caf50;
+  border-color: #6bc1d5;
+  box-shadow: 0 0 8px rgba(107, 193, 213, 0.5);
   outline: none;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Button styling */
+button {
+  background-color: #1ca57f;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
 }

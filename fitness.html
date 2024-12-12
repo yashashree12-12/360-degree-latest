@@ -7,69 +7,105 @@
   <link rel="stylesheet" href="fitness.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" width="50" height="50">
+      </div>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#category">Category</a>
+        <a href="#profile">Profile</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Form Section -->
   <div class="container">
-    <h1>360-Degree Fitness</h1>
-    <form id="fitness-form">
-      <!-- Age Input -->
-      <input type="number" id="age" name="age" placeholder="Age" required min="10" max="100" title="Enter your age between 10 and 100">
+    <div class="form-container">
+      <!-- Left Form Section -->
+      <div class="form-section">
+        <header>
+          <h1>360-Degree Fitness</h1>
+          <p>Welcome to 360-Degree Fitness! This page is designed to help you achieve your fitness goals by generating a personalized exercise plan tailored to your unique attributes. Simply input your age, weight, height, gender, any physical pain, exercise level, fitness goals, and preferred exercise time. Based on these details, we will provide you with an exercise plan that suits your needs and helps you progress towards your fitness journey. Let's get started and take the first step towards a healthier you!</p>
+        </header>
+        <form id="fitness-form">
+          <!-- Form Inputs (Age, Weight, Height, etc.) -->
+          <div class="form-group">
+            <input type="number" id="age" name="age" placeholder="Age" required min="10" max="100">
+          </div>
+          <div class="form-group">
+            <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required min="30" max="200">
+          </div>
+          <div class="form-group">
+            <input type="number" id="height" name="height" placeholder="Height (cm)" required min="100" max="250">
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="non-binary">Non-binary</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pain">Physical Pain:</label>
+            <select id="pain" name="pain" required>
+              <option value="none">None</option>
+              <option value="back-pain">Back Pain</option>
+              <option value="knee-pain">Knee Pain</option>
+              <option value="neck-pain">Neck Pain</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exercise-level">Exercise Level:</label>
+            <select id="exercise-level" name="exercise-level" required>
+              <option value="basic">Basic</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="expert">Expert</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="goals">Fitness Goals:</label>
+            <select id="goals" name="goals" required>
+              <option value="" disabled selected>Select your fitness goal</option>
+              <option value="weight-loss">Weight Loss</option>
+              <option value="muscle-gain">Muscle Gain</option>
+              <option value="endurance">Improve Endurance</option>
+              <option value="flexibility">Increase Flexibility</option>
+              <option value="overall-health">Overall Health</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exercise-time">Preferred Exercise Time:</label>
+            <select id="exercise-time" name="exercise-time">
+              <option value="" disabled selected>Exercise-time</option>
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+              <option value="anytime">Anytime</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
 
-      <!-- Weight Input -->
-      <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required min="30" max="200" title="Enter your weight in kilograms (30-200kg)">
-
-      <!-- Height Input -->
-      <input type="number" id="height" name="height" placeholder="Height (cm)" required min="100" max="250" title="Enter your height in centimeters (100-250cm)">
-
-      <!-- Gender Selection -->
-      <label for="gender">Gender:</label>
-      <select id="gender" name="gender" required>
-        <option value="" disabled selected>Select your gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="non-binary">Non-binary</option>
-        <option value="prefer-not-to-say">Prefer not to say</option>
-      </select>
-
-      <!-- Physical Pain Selection -->
-      <label for="pain">Physical Pain:</label>
-      <select id="pain" name="pain" required>
-        <option value="none">None</option>
-        <option value="back-pain">Back Pain</option>
-        <option value="knee-pain">Knee Pain</option>
-        <option value="neck-pain">Neck Pain</option>
-        <option value="other">Other</option>
-      </select>
-
-      <!-- Activity Level Selection -->
-      <label for="exercise-level">Exercise Level:</label>
-      <select id="exercise-level" name="exercise-level" required>
-        <option value="basic">Basic</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="expert">Expert</option>
-      </select>
-
-      <!-- Fitness Goals -->
-      <label for="goals">Fitness Goals:</label>
-      <select id="goals" name="goals" required>
-        <option value="" disabled selected>Select your fitness goal</option>
-        <option value="weight-loss">Weight Loss</option>
-        <option value="muscle-gain">Muscle Gain</option>
-        <option value="endurance">Improve Endurance</option>
-        <option value="flexibility">Increase Flexibility</option>
-        <option value="overall-health">Overall Health</option>
-      </select>
-
-      <!-- Preferred Exercise Time -->
-      <label for="exercise-time">Preferred Exercise Time:</label>
-      <select id="exercise-time" name="exercise-time">
-        <option value="morning">Morning</option>
-        <option value="afternoon">Afternoon</option>
-        <option value="evening">Evening</option>
-        <option value="anytime">Anytime</option>
-      </select>
-
-      <!-- Submit Button -->
-      <button type="submit">Submit</button>
-    </form>
+      <!-- Right Box for Results -->
+      <div class="results-box">
+        <h2>Exercise Plan Results</h2>
+        <div id="results">
+          <!-- Results will be displayed here -->
+          <p>Enter your details and we will generate a personalized exercise plan for you.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
