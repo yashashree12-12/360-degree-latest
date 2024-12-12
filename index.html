@@ -29,14 +29,79 @@
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#services" class="menu-btn">Category</a></li>
-                <li><a href="#contact" class="menu-btn">Profile</a></li>
+                <li><a href="#" id="profile-btn">Profile</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
+    <!-- Profile Side Panel -->
+    <div class="profile-panel" id="profile-panel">
+        <div class="panel-header">
+            <h2>Profile</h2>
+            <button id="close-panel">&times;</button>
+        </div>
 
+        <!-- Gender Icon -->
+        <div class="gender-icon">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle -->
+                <circle cx="32" cy="32" r="30" fill="#f0f0f0" stroke="#333" stroke-width="2"></circle>
+                <!-- Head -->
+                <circle cx="32" cy="22" r="8" fill="#333"></circle>
+                <!-- Body -->
+                <line x1="32" y1="30" x2="32" y2="48" stroke="#333" stroke-width="3"></line>
+                <!-- Arms -->
+                <line x1="32" y1="36" x2="24" y2="42" stroke="#333" stroke-width="3"></line>
+                <line x1="32" y1="36" x2="40" y2="42" stroke="#333" stroke-width="3"></line>
+                <!-- Legs -->
+                <line x1="32" y1="48" x2="26" y2="58" stroke="#333" stroke-width="3"></line>
+                <line x1="32" y1="48" x2="38" y2="58" stroke="#333" stroke-width="3"></line>
+            </svg>
+        </div>
+
+        <!-- Profile Details -->
+        <div class="profile-details">
+            <p><strong>Username:</strong> <span id="profile-username">John Doe</span></p>
+            <p><strong>Email:</strong> <span id="profile-email">johndoe@example.com</span></p>
+            <p><strong>Date of Birth:</strong> <span id="profile-dob">1990-01-01</span></p>
+            <p><strong>Mobile Number:</strong> <span id="profile-mobile">123-456-7890</span></p>
+        </div>
+
+        <!-- Change Password Section -->
+        <div class="change-password">
+            <h3>Change Password</h3>
+            <input type="password" id="new-password" placeholder="New Password">
+            <button id="save-password">Save Changes</button>
+        </div>
+    </div>
+
+    <script>
+        const profileBtn = document.getElementById('profile-btn');
+        const profilePanel = document.getElementById('profile-panel');
+        const closePanelBtn = document.getElementById('close-panel');
+        const savePasswordBtn = document.getElementById('save-password');
+
+        profileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            profilePanel.classList.add('active');
+        });
+
+        closePanelBtn.addEventListener('click', () => {
+            profilePanel.classList.remove('active');
+        });
+
+        savePasswordBtn.addEventListener('click', () => {
+            const newPassword = document.getElementById('new-password').value;
+            if (newPassword) {
+                alert('Password updated successfully!');
+                document.getElementById('new-password').value = ''; // Clear the input field
+            } else {
+                alert('Please enter a new password.');
+            }
+        });
+    </script>
     <!-- home section start -->
     <section class="home" id="home">
         <div class="max-width">
