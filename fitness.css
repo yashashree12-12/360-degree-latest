@@ -1,101 +1,168 @@
-/* fitness.css */
-body {
+/* General Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Arial', sans-serif;
-  background-image: url('images/fitnessbackground.jpg'); /* Ensure the file path is correct */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background: linear-gradient(120deg, #70c1b3, #b2dbbf);
+  color: #1b0303;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: flex-start;
+  text-align: flex-start;
+}
+
+/* Navbar Styling */
+nav {
+  width: 100%;
+  background-color: #0e6e5b;
+  padding: 40px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  transition: background-color rgb(4, 4, 71);
+}
+
+.navbar-links a:hover {
+  background-color: #0c8c8e;
+  border-radius: 5px;
+}
+
+/* Form Container Styling */
 .container {
-  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for the background */
-  padding: 30px;
-  max-width: 400px;
-  width: 90%; /* Adjusts for smaller screens */
-  border-radius: 12px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  width: 80%;
+  padding: 20px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 1.8rem;
-  color: #0a5fc7;
-  font-weight: bold;
-}
-
+/* Form Styling */
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
 }
 
 form input,
 form select,
 form button {
-  margin-bottom: 15px;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px;
   font-size: 1rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-form input:focus,
-form select:focus {
-  border-color: #0a5fc7;
-  outline: none;
-  box-shadow: 0 0 8px rgba(10, 95, 199, 0.6);
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
 form button {
-  background-color: #0a5fc7;
-  color: white;
-  border: none;
+  background-color: #055549;
+  color: #fff;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 form button:hover {
-  background-color: #030b52;
-  transform: translateY(-2px); /* Slight elevation on hover */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #e55c50;
 }
 
-/* Animation for fade-in effect */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #065b51;
 }
 
-/* Responsive Styling */
-@media (max-width: 480px) {
-  .container {
-    padding: 20px;
-  }
+.form-group {
+  width: 100%;
+}
+/* Flexbox Layout for the Main Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
 
-  h1 {
-    font-size: 1.5rem;
-  }
+/* Form Container */
+.form-container {
+  display: flex;
+  width: 100%;
+}
 
-  form input,
-  form select,
-  form button {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
+/* Form Section (Left Side) */
+.form-section {
+  width: 60%;
+  margin-right: 20px; /* Add margin on the right to separate from the results box */
+}
+
+/* Results Box (Right Side) */
+.results-box {
+  width: 35%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.results-box #results {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Form Inputs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="number"], select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
