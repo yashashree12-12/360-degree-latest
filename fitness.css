@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(120deg, #70c1b3, #b2dbbf);
+  background-image: url('images/fitnessbackground.jpg');;
   color: #1b0303;
   min-height: 100vh;
   display: flex;
@@ -20,7 +20,7 @@ body {
 /* Navbar Styling */
 nav {
   width: 100%;
-  background-color: #0e6e5b;
+  background-color: #86E6E0;
   padding: 40px 0;
 }
 
@@ -84,20 +84,20 @@ form button {
 }
 
 form button {
-  background-color: #055549;
+  background-color: #86E6E0;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 form button:hover {
-  background-color: #e55c50;
+  background-color: #487f7c;
 }
 
 h1 {
   font-size: 3rem;
   margin-bottom: 30px;
-  color: #065b51;
+  color: #000000;
 }
 
 .form-group {
